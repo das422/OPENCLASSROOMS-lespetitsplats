@@ -19,14 +19,14 @@
   <body>
     <header class="hero">
       <div class="p-5">
-        <img src="./public/images/logo/logo.png" alt="logo" />
+        <img src="./public/images/logo/logo.png" alt="logo"  />
       </div>
       <div class="flex justify-center items-center flex-col mx-40 px-10">
         <div
           class="text-yellow-400 font-bold text-4xl uppercase text-center p-10"
         >
           <h1>
-            cherchez parmi plus de 1500 recettes du quotidien, simples et
+            cherchez parmi plus de 1500 recettes <br/> du quotidien, simples et
             délicieuses
           </h1>
         </div>
@@ -46,5 +46,44 @@
           </button>
         </div>
     </header>
+    <main class="main mx-auto px-2 bg-[#EDEDED] ">
+      <div id="search-filter">
+        <div class="flex justify-center items-center flex-col mx-40 px-10 py-5">
+
+          <div class="flex justify-center items-center gap-4">
+            <div class="flex justify-center items-center">
+              <label for="ingredient"></label>
+              <input
+                type="text"
+                class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                placeholder="Ingrédients"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <label for="appareil"></label>
+              <input
+                type="text"
+                class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                placeholder="Appareils"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <label for="ustensiles"></label>
+              <input
+                type="text"
+                class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                placeholder="Ustensiles"
+              />
+              <span class="font-bold">1500 recettes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="recipes-section   mx-auto grid grid-cols-3 gap-4 px-2 ">
+
+  
+      </section>
+    </main>
+    <script src="scripts/pages/index.js" type="module"></script>
   </body>
 </html>
