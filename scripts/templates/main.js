@@ -8,15 +8,15 @@ export default class RecipeCard {
     card.classList.add("recipe-card");
     const RecipeCard = `
 
-    <div class="recipe-card-image">
+    <div class="recipe-card-image space-y-4">
       <img src="./assets/images/${this.recipe.image}" alt="${this.recipe.name}">
     </div>
 
     <h3 class="font-bold">${this.recipe.name}</h3>
-    <div class="recipe-card-content -3">
+    <div class="recipe-card-content space-y-5 w-full line-clamp-5 text-clip">
 
      <h4 class="text-muted uppercase text-sm">recette</h4>
-      <p class="text-wrap text-ellipsis"> ${this.recipe.description}</p>
+      <p class=""> ${this.recipe.description}</p>
     </div>
      <p>Ingredients</p>
       <ul class="grid grid-cols-3">
