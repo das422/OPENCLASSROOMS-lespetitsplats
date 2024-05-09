@@ -9,7 +9,9 @@ export default class RecipeCard {
     const RecipeCard = `
 
     <div class="recipe-card-image space-y-4">
-      <img src="public/images/assets/${this.recipe.image}" alt="${this.recipe.name}">
+      <img src="public/images/assets/${this.recipe.image}" alt="${
+      this.recipe.name
+    }" class="aspect-square w-full">
     </div>
 
     <h3 class="font-bold">${this.recipe.name}</h3>

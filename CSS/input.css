@@ -2,20 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero{
+
+.hero {
   background-image: url(../public/images/hero-img.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-width: 100%;
-height: auto;
-
+  width: 100%;
+  height: auto;
 }
 
-.recipe-card{
+.recipe-card {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- padding:1rem;
-
+  padding: 1rem;
 }
