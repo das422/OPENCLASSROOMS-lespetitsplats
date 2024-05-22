@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch":"npx tailwindcss -i ./CSS/input.css -o ./CSS/style.css --watch"
+    "watch": "npx tailwindcss -i ./CSS/input.css -o ./CSS/style.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "tailwind": "^4.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
   }
 }
