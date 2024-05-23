@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,21 +11,30 @@
   <link href="./CSS/style.css" rel="stylesheet" />
   <title>Les petits plats</title>
 </head>
+
 <body>
-  <header class="flex flex-col relative py-10 px-5 object-cover bg-cover bg-center bg-no-repeat" style="background-image: url(public/images/hero-img.jpg);">
+  <header class="flex flex-col relative py-10 px-5 object-cover bg-cover bg-center bg-no-repeat"
+    style="background-image: url(public/images/hero-img.jpg);">
+
     <img class="block w-[200px]" src="./public/images/logo/logo.png" alt="logo" />
+
     <div class="flex flex-col flex-grow gap-10 p-10 text-center justify-center items-center">
       <h1 class="text-yellow-400 font-bold text-4xl uppercase flex flex-col">
-        Cherchez parmi plus de 1500 recettes <br /> du quotidien, simples et délicieuses
+        Cherchez parmi plus de 1500 recettes <br /> du quotidien, simples et
+        délicieuses
       </h1>
       <div class="w-full bg-none flex cursor-pointer relative box-border max-w-[1024px]">
-        <input class="ps-2 w-full h-10 rounded-l-md" type="text" id="search-recipe" placeholder="Rechercher une recette, un ingrédient,...">
-        <button class="flex justify-center items-center bg-black px-5 py-2 rounded-r-md" aria-hidden="true" aria-label="Clear search-filter">
-          <svg fill="white" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490.4 490.4" xml:space="preserve">
+        <input class="ps-2 w-full h-10 rounded-l-md" type="text" id="search-recipe"
+          placeholder="Rechercher une recette, un ingrédient,...">
+        <button class="flex justify-center items-center bg-black px-5 py-2 rounded-r-md" aria-hidden="true"
+          aria-label="Clear search-filter">
+          <svg fill="white" height="16px" width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490.4 490.4" xml:space="preserve">
             <g>
-              <path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796
-		s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z
-		 M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z" />
+              <path
+                d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796
+      s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z
+       M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z" />
             </g>
           </svg>
         </button>
@@ -42,4 +52,5 @@
   </main>
   <script src="scripts/pages/index.js" type="module"></script>
 </body>
+
 </html>

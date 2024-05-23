@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default class Recipes{
   constructor(data) {
     this.id = data.id;
