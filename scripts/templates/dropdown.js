@@ -11,17 +11,17 @@ export default class Dropdown {
 
   createDropdown() {
     const dropdownContainer = document.createElement('div');
-    dropdownContainer.classList.add('relative', 'w-full', 'sm:w-1/3');
+    dropdownContainer.classList.add('relative', 'w-full', 'sm:w-auto', 'mb-4');
 
     const dropdownContent = `
-      <div class="dropdown rounded-md bg-white shadow-md w-full">
-        <button type="button" class="dropdown_btn flex justify-between items-center w-full p-2 border rounded-md">
+      <div class="dropdown w-full">
+        <button type="button" class="dropdown_btn flex justify-between items-center w-full py-2 px-4 rounded-md gap-2 bg-white text-gray-800 border border-transparent focus:outline-none">
           <span>${this.name}</span>
           <span class="fa-solid fa-chevron-down"></span>
         </button>
-        <div class="dropdown_content hidden absolute z-10 w-full bg-white border mt-1 rounded-md shadow-md">
-          <input type="text" id="search-${this.name}" class="p-2 w-full border-b" placeholder="Rechercher ${this.name}">
-          <ul class="dropdown_content_list max-h-60 overflow-y-auto"></ul>
+        <div class="dropdown_content hidden absolute z-10 w-full bg-white border border-gray-300 mt-1 rounded-md shadow-lg max-h-60 overflow-y-auto">
+          <input type="text" id="search-${this.name}" class="p-2 w-full border-b border-gray-200" placeholder="Rechercher ${this.name}">
+          <ul class="dropdown_content_list"></ul>
         </div>
       </div>
     `;
@@ -54,7 +54,7 @@ export default class Dropdown {
     this.itemsList.innerHTML = '';
     items.forEach((item) => {
       const listItem = document.createElement('li');
-      listItem.classList.add('p-2', 'cursor-pointer', 'hover:bg-gray-100');
+      listItem.classList.add('p-2', 'cursor-pointer', 'hover:bg-gray-100', 'border-b', 'border-gray-200');
       listItem.textContent = item;
       this.itemsList.appendChild(listItem);
 
