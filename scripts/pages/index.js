@@ -3,6 +3,8 @@ import Api from "../api/Api.js";
 import RecipeCard from "../templates/RecipeTemplate.js";
 import Dropdown from '../templates/dropdown.js'; // Adjust the path if necessary
 
+
+
 export let selectedTags = [];
 let allRecipes = [];
 

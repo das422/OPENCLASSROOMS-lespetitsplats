@@ -5,19 +5,20 @@ export default class RecipeCard {
 
   createRecipeCard() {
     const card = document.createElement("div");
-    card.classList.add("recipe-card");
+    card.classList.add("bg-white", "p-4", "rounded-lg", "shadow-md");
+
     const RecipeCard = `
-      <div class="recipe-card-image space-y-4">
-        <img src="public/images/assets/${this.recipe.image}" alt="${this.recipe.name}" class="aspect-square w-full">
+      <div class="mb-4">
+        <img src="public/images/assets/${this.recipe.image}" alt="${this.recipe.name}" class="w-full h-48 object-cover rounded-lg">
       </div>
-      <h3 class="font-bold">${this.recipe.name}</h3>
-      <div class="recipe-card-content space-y-5 w-full line-clamp-5 text-clip">
-        <h4 class="text-muted uppercase text-sm">recette</h4>
-        <p class="">${this.recipe.description}</p>
+      <h3 class="text-xl font-bold mb-2">${this.recipe.name}</h3>
+      <div class="text-sm text-gray-600 mb-4">
+        <h4 class="font-bold">Recette</h4>
+        <p>${this.recipe.description}</p>
       </div>
-      <p>Ingredients</p>
-      <ul class="grid grid-cols-3">
-        ${this.recipe.ingredients.map(ingredient => `<li>${ingredient.ingredient}</li><li>${ingredient.quantity || ''}</li>`).join("")}
+      <p class="font-bold">Ingrédients</p>
+      <ul class="list-disc list-inside">
+        ${this.recipe.ingredients.map(ingredient => `<li>${ingredient.ingredient} ${ingredient.quantity || ''}</li>`).join("")}
       </ul>
     `;
     card.innerHTML = RecipeCard;
