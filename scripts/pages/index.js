@@ -1,51 +1,21 @@
-// Import necessary modules
+// index.js
 import Api from "../api/Api.js";
 import RecipeCard from "../templates/RecipeTemplate.js";
-import Dropdown from '../templates/dropdown.js'; // Adjust the path if necessary
+import Dropdown from '../templates/dropdown.js';
+import { setAllRecipes, displayRecipes, filterRecipesByTags, selectedTags } from '../utils/tag.js';
+import { normalizeText } from '../utils/normalize.js';
 
-
-
-export let selectedTags = [];
 let allRecipes = [];
 
 const recipesSection = document.querySelector(".recipes-section");
 const recipesApi = new Api("./data/recipe.json");
 
-export const setAllRecipes = (recipes) => {
-  allRecipes = recipes;
-};
-
-export const displayRecipes = (recipes) => {
-  recipesSection.innerHTML = '';
-  recipes.forEach((recipe) => {
-    const recipeCard = new RecipeCard(recipe);
-    const card = recipeCard.createRecipeCard();
-    recipesSection.appendChild(card);
-  });
-};
-
-export const filterRecipesByTags = (tags) => {
-  let filtered = allRecipes;
-
-  if (tags.length > 0) {
-    filtered = allRecipes.filter(recipe => {
-      return tags.every(tag => {
-        return recipe.ingredients.some(ingredient => ingredient.ingredient.includes(tag)) ||
-               recipe.ustensils.includes(tag) ||
-               recipe.appliance.includes(tag);
-      });
-    });
-  }
-
-  displayRecipes(filtered);
-};
-
 const filterRecipes = (query) => {
-  query = query.toLowerCase();
+  query = normalizeText(query);
   const filteredRecipes = allRecipes.filter(recipe => {
-    return recipe.name.toLowerCase().includes(query) ||
-      recipe.ingredients.some(ingredient => ingredient.ingredient.toLowerCase().includes(query)) ||
-      recipe.description.toLowerCase().includes(query);
+    return normalizeText(recipe.name).includes(query) ||
+      recipe.ingredients.some(ingredient => normalizeText(ingredient.ingredient).includes(query)) ||
+      normalizeText(recipe.description).includes(query);
   });
   displayRecipes(filteredRecipes);
 };
