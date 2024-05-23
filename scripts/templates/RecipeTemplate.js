@@ -1,4 +1,4 @@
-// RecipeTemplate.js
+// templates/RecipeTemplate.js
 export default class RecipeCard {
   constructor(recipe) {
     this.recipe = recipe;
