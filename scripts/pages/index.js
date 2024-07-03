@@ -1,4 +1,3 @@
-// index.js
 import Api from "../api/Api.js";
 import Dropdown from "../templates/dropdown.js";
 import { setAllRecipes, displayRecipes, selectedTags } from "../utils/tag.js";
@@ -112,7 +111,7 @@ const getDropdown = async () => {
       const dropdownType = new Dropdown([...new Set(items)], type);
       const dropdownElement = dropdownType.createDropdown();
       document.querySelector(".filter_section").appendChild(dropdownElement);
-      dropdowns.push(dropdownType); // Store reference to the dropdown
+      dropdowns.push(dropdownType);
     });
   } catch (error) {
     console.error("Error fetching dropdown items:", error);

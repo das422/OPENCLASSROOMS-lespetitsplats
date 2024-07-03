@@ -1,5 +1,4 @@
-// dropdown.js
-import Tag, { selectedTags, filterRecipesByTags } from "../utils/tag.js"; // Adjust the path as necessary
+import Tag, { selectedTags, filterRecipesByTags } from "../utils/tag.js";
 
 let currentlyOpenDropdown = null;
 

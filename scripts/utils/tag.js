@@ -1,7 +1,7 @@
-// tag.js
+
 import RecipeCard from "../templates/RecipeTemplate.js";
 import { normalizeText } from "../utils/normalize.js";
-import { filterRecipes, updateRecipeCount } from "../pages/index.js"; // Ensure the path is correct
+import { filterRecipes, updateRecipeCount } from "../pages/index.js"; 
 
 export default class Tag {
   constructor(tagText) {
@@ -29,7 +29,7 @@ export default class Tag {
 
     const removeIcon = document.createElement("span");
     removeIcon.classList.add("cursor-pointer");
-    removeIcon.innerHTML = "&times;"; // Using the multiplication sign as an "X"
+    removeIcon.innerHTML = "&times;"; 
 
     removeIcon.addEventListener("click", () => {
       tagElement.remove();
@@ -37,7 +37,7 @@ export default class Tag {
       if (index > -1) {
         selectedTags.splice(index, 1);
       }
-      filterRecipes(); // Use the current search query and updated tags
+      filterRecipes(); 
     });
 
     tagElement.appendChild(tagTextElement);
@@ -69,7 +69,7 @@ export const filterRecipesByTags = (tags) => {
   }
 
   displayRecipes(filtered);
-  updateRecipeCount(filtered.length); // Update the count here
+  updateRecipeCount(filtered.length); 
 };
 
 export const setAllRecipes = (recipes) => {
