@@ -66,6 +66,7 @@ export default class Dropdown {
       this.itemsList.appendChild(listItem);
 
       listItem.addEventListener("click", () => {
+        console.log(item);
         this.addTag(item);
         this.closeDropdown();
       });

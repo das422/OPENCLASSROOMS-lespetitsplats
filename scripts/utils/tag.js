@@ -1,6 +1,7 @@
 import RecipeCard from "../templates/RecipeTemplate.js";
 import { normalizeText } from "../utils/normalize.js";
 import { filterRecipes, updateRecipeCount } from "../pages/index.js"; 
+import { updateDropdowns } from "../pages/index.js";
 
 export default class Tag {
   constructor(tagText) {
@@ -31,6 +32,7 @@ export default class Tag {
     removeIcon.innerHTML = "&times;"; 
 
     removeIcon.addEventListener("click", () => {
+
       tagElement.remove();
       const index = selectedTags.indexOf(this.tagText);
       if (index > -1) {
@@ -49,11 +51,14 @@ export const selectedTags = [];
 let allRecipes = [];
 
 export const filterRecipesByTags = (tags) => {
+  console.log(tags);
   let filtered = allRecipes;
 
   if (tags.length > 0) {
     filtered = allRecipes.filter((recipe) => {
+
       return tags.every((tag) => {
+
         return (
           recipe.ingredients.some((ingredient) =>
             normalizeText(ingredient.ingredient).includes(normalizeText(tag))
@@ -65,10 +70,12 @@ export const filterRecipesByTags = (tags) => {
         );
       });
     });
+    console.log(filtered);
   }
 
   displayRecipes(filtered);
-  updateRecipeCount(filtered.length); 
+  updateRecipeCount(filtered.length);
+  updateDropdowns(filtered);
 };
 
 export const setAllRecipes = (recipes) => {

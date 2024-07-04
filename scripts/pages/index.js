@@ -24,6 +24,7 @@ export const filterRecipes = (
       normalizeText(recipe.description).includes(query)
     );
   });
+
   const filteredByTags =
     tags.length === 0
       ? filteredBySearch
@@ -48,7 +49,7 @@ export const filterRecipes = (
   updateRecipeCount(filteredByTags.length);
 };
 
-const updateDropdowns = (filteredRecipes) => {
+export const updateDropdowns = (filteredRecipes) => {
   const dropdownTypes = ["Ingrédients", "Ustensiles", "Appareils"];
 
   dropdownTypes.forEach((type, index) => {
@@ -68,6 +69,7 @@ const updateDropdowns = (filteredRecipes) => {
     }
     dropdowns[index].updateItems([...new Set(items)]);
   });
+
 };
 
 const getRecipes = async () => {
