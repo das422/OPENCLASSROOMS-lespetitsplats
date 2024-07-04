@@ -51,7 +51,6 @@ export const selectedTags = [];
 let allRecipes = [];
 
 export const filterRecipesByTags = (tags) => {
-  console.log(tags);
   let filtered = allRecipes;
 
   if (tags.length > 0) {
@@ -70,7 +69,6 @@ export const filterRecipesByTags = (tags) => {
         );
       });
     });
-    console.log(filtered);
   }
 
   displayRecipes(filtered);
