@@ -42,13 +42,12 @@ export const filterRecipes = (
             );
           });
         });
-
   displayRecipes(filteredByTags);
   updateDropdowns(filteredByTags);
   updateRecipeCount(filteredByTags.length);
 };
 
-const updateDropdowns = (filteredRecipes) => {
+export const updateDropdowns = (filteredRecipes) => {
   const dropdownTypes = ["Ingrédients", "Ustensiles", "Appareils"];
 
   dropdownTypes.forEach((type, index) => {

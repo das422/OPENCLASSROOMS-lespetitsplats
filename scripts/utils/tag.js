@@ -2,6 +2,7 @@
 import RecipeCard from "../templates/RecipeTemplate.js";
 import { normalizeText } from "../utils/normalize.js";
 import { filterRecipes, updateRecipeCount } from "../pages/index.js"; 
+import { updateDropdowns } from "../pages/index.js";
 
 export default class Tag {
   constructor(tagText) {
@@ -67,9 +68,10 @@ export const filterRecipesByTags = (tags) => {
       });
     });
   }
-
+console.log(filtered);
   displayRecipes(filtered);
-  updateRecipeCount(filtered.length); 
+  updateRecipeCount(filtered.length);
+  updateDropdowns(filtered);
 };
 
 export const setAllRecipes = (recipes) => {
